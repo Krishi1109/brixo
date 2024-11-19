@@ -248,40 +248,40 @@
 	}
 
 	/* Contact form validation */
-	var $contactform = $("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
+	// var $contactform = $("#contactForm");
+	// $contactform.validator({focus: false}).on("submit", function (event) {
+	// 	if (!event.isDefaultPrevented()) {
+	// 		event.preventDefault();
+	// 		submitForm();
+	// 	}
+	// });
 
-	function submitForm(){
-		/* Initiate Variables With Form Content*/
-		var fname = $("#fname").val();
-		var lname = $("#lname").val();
-		var email = $("#email").val();
-		var phone = $("#phone").val();
-		var message = $("#msg").val();
+	// function submitForm(){
+	// 	/* Initiate Variables With Form Content*/
+	// 	var fname = $("#fname").val();
+	// 	var lname = $("#lname").val();
+	// 	var email = $("#email").val();
+	// 	var phone = $("#phone").val();
+	// 	var message = $("#msg").val();
 
-		$.ajax({
-			type: "POST",
-			url: "form-process.php",
-			data: "fname=" + fname + "&lname=" + lname + "&email=" + email + "&phone=" + phone + "&message=" + message,
-			success : function(text){
-				if (text == "success"){
-					formSuccess();
-				} else {
-					submitMSG(false,text);
-				}
-			}
-		});
-	}
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "send_mail.php",
+	// 		data: "fname=" + fname + "&lname=" + lname + "&email=" + email + "&phone=" + phone + "&message=" + message,
+	// 		success : function(text){
+	// 			if (text == "success"){
+	// 				formSuccess();
+	// 			} else {
+	// 				submitMSG(false,text);
+	// 			}
+	// 		}
+	// 	});
+	// }
 
-	function formSuccess(){
-		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
-	}
+	// function formSuccess(){
+	// 	$contactform[0].reset();
+	// 	submitMSG(true, "Message Sent Successfully!")
+	// }
 
 	function submitMSG(valid, msg){
 		if(valid){
