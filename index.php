@@ -12,17 +12,170 @@
   <!-- Page Title -->
   <title>Deck Point - Home</title>
   <!-- Favicon Icon -->
-  <?php include "header.php"; ?>
+  <link rel="shortcut icon" type="image/x-icon" href="images/Logo/header3.png" />
+  <!-- Google Fonts Css-->
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Unbounded:wght@200..900&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap Css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <!-- SlickNav Css -->
+  <link href="css/slicknav.min.css" rel="stylesheet" />
+  <!-- Swiper Css -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Font Awesome Icon Css-->
+  <link href="css/all.css" rel="stylesheet" media="screen" />
+  <!-- Animated Css -->
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- Magnific Popup Core Css File -->
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <!-- Mouse Cursor Css File -->
+  <link rel="stylesheet" href="css/mousecursor.css" />
+  <!-- Main Custom Css -->
+  <link href="css/custom.css" rel="stylesheet" media="screen" />
+
+  <style>
+    .opacityClass {
+      opacity: 0.5;
+    }
+
+    /* Preloader styling */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #39d5ff;
+      /* White background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      /* Ensure it overlays the content */
+    }
+
+    /* Larger Logo with optional animation */
+    .loading-logo {
+      width: 400px;
+      /* Increased logo size */
+      height: auto;
+      /* Maintains aspect ratio */
+      animation: bounce 2s infinite ease-in-out;
+      /* Bouncing animation */
+    }
+
+    /* Bouncing animation */
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-100px);
+        /* Adjust the height of the bounce */
+      }
+    }
+  </style>
 
 </head>
 
 <body>
   <!-- Preloader Start -->
-  <?php include "preloader.php"; ?>
+  <div class="preloader">
+    <div class="loading-container1">
+      <img class="loading-logo" src="images/Logo/trans1.png" alt="Logo" />
+    </div>
+  </div>
   <!-- Preloader End -->
 
   <!-- Navbar Start -->
-  <?php include "navbar.php"; ?>
+  <header class="main-header">
+    <div class="header-sticky">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <!-- Logo Start -->
+          <a class="navbar-brand" href="index.php">
+            <img src="images/Logo/header4.png" alt="Logo" width="60px" />
+          </a>
+          <!-- Logo End -->
+
+          <!-- Main Menu Start -->
+          <div class="collapse navbar-collapse main-menu">
+            <div class="nav-menu-wrapper">
+              <ul class="navbar-nav mr-auto" id="menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.php">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.php">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="project.php">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="story.php">Our Story</a>
+                </li>
+                <!-- <li class="nav-item submenu">
+                                <a class="nav-link" href="#">Pages</a>
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="service-single.php">Service Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="blog-single.php">Blog Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="project-single.php">Project Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="case-study.php">Case Study</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="case-study-single.php">Case Study Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="team.php">Our Team</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="team-single.php">Team Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="testimonial.php">Testimonial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="faqs.php">FAQ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="404.php">404</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                <li class="nav-item highlighted-menu">
+                  <a class="nav-link" href="contact.php">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Let’s Start Button Start -->
+            <div class="header-btn d-inline-flex">
+              <a href="contact.php" class="btn-default">contact us</a>
+            </div>
+            <!-- Let’s Start Button End -->
+          </div>
+          <!-- Main Menu End -->
+          <div class="navbar-toggle"></div>
+        </div>
+      </nav>
+      <div class="responsive-menu"></div>
+    </div>
+  </header>
   <!-- Navbar End -->
 
   <!-- Hero Section Start -->
@@ -687,11 +840,137 @@
 
 
   <!-- Footer / script links start -->
-  <?php include "footer.php"; ?>
+  <!-- Footer Start -->
+  <footer class="main-footer">
+    <!-- Scrolling Ticker Section Start -->
+    <div class="our-scrolling-ticker">
+      <!-- Scrolling Ticker Start -->
+      <div class="scrolling-ticker-box">
+        <div class="scrolling-content">
+          <span>Deck point</span>
+          <span>Deck point</span>
+          <span>Deck point</span>
+          <span>Deck point</span>
+        </div>
+
+        <div class="scrolling-content">
+          <span>Deck point</span>
+          <span>Deck point</span>
+          <span>Deck point</span>
+          <span>Deck point</span>
+        </div>
+      </div>
+    </div>
+    <!-- Scrolling Ticker Section End -->
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-3 col-6">
+          <!-- Footer Links Start -->
+          <div class="footer-links">
+            <h3>follow us</h3>
+            <ul>
+              <li><a href="#">facebook</a></li>
+              <li><a href="#">instagram</a></li>
+              <li><a href="#">pinterest</a></li>
+              <li><a href="#">twitter</a></li>
+              <li><a href="#">linked in</a></li>
+            </ul>
+          </div>
+          <!-- Footer Links End -->
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6">
+          <!-- Footer Links Start -->
+          <div class="footer-links">
+            <h3>company</h3>
+            <ul>
+              <li><a href="about.php">About Us</a></li>
+              <li><a href="service.php">Services</a></li>
+              <li><a href="project.php">Projects</a></li>
+              <li><a href="story.php">Our Story</a></li>
+              <li><a href="contact.php">contact us</a></li>
+            </ul>
+          </div>
+          <!-- Footer Links End -->
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-7">
+          <!-- Footer Links Start -->
+          <div class="footer-links footer-contact-info">
+            <h3>resources</h3>
+            <p>+1 809 120 705</p>
+            <p>info@deckpoint.com</p>
+            <p>37 San Juan Graaf Florisstraat 22A,3021, NYK, US</p>
+          </div>
+          <!-- Footer Links End -->
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-5">
+          <!-- About Footer Start -->
+          <div class="about-footer">
+            <!-- Footer Logo Start -->
+            <div class="footer-logo">
+              <img src="images/Logo/footer-logo.png" alt="" />
+            </div>
+            <!-- Footer Logo End -->
+          </div>
+          <!-- About Footer End -->
+        </div>
+      </div>
+
+      <!-- Footer Copyright Section Start -->
+      <div class="footer-copyright">
+        <div class="row align-items-center ">
+          <div class="col-lg-12 col-md-12">
+            <!-- Footer Copyright Start -->
+            <div class="footer-copyright-text">
+              <p>Copyright © 2024 All Rights Reserved.</p>
+            </div>
+            <!-- Footer Copyright End -->
+          </div>
+
+        </div>
+      </div>
+      <!-- Footer Copyright Section End -->
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Jquery Library File -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap js file -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Validator js file -->
+  <script src="js/validator.min.js"></script>
+  <!-- SlickNav js file -->
+  <script src="js/jquery.slicknav.js"></script>
+  <!-- Swiper js file -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Counter js file -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <!-- Magnific js file -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- SmoothScroll -->
+  <script src="js/SmoothScroll.js"></script>
+  <!-- Parallax js -->
+  <script src="js/parallaxie.js"></script>
+  <!-- MagicCursor js file -->
+  <script src="js/gsap.min.js"></script>
+  <script src="js/magiccursor.js"></script>
+  <!-- Text Effect js file -->
+  <script src="js/SplitText.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <!-- YTPlayer js File -->
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <!-- Wow js file -->
+  <script src="js/wow.js"></script>
+  <!-- Main Custom js file -->
+  <script src="js/function.js"></script>
   <!-- Footer / script links end -->
 
 </body>
 
-<!-- Mirrored from demo.awaikenthemes.com/html-preview/brixo/index-video.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 18:20:04 GMT -->
 
 </html>
